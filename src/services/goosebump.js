@@ -6,9 +6,11 @@ export async function getGoosebump() {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     },
     credentials: 'include',
   });
+  console.log(resp);
   if (resp.ok) {
     const answers = await resp.json();
     return answers;

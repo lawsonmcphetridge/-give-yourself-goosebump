@@ -7,7 +7,7 @@ export default function Book() {
   console.log(goosebump);
   return (
     <div className="main">
-      <div>tits or ass? ass</div>
+      <div>Hello world!</div>
     </div>
   );
 }
