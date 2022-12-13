@@ -11,21 +11,34 @@ export default function Page() {
   let optionsText;
   let options;
   let targetPage;
-  console.log(goosebump);
   if (goosebump.options) {
     optionsText = goosebump.options[0].option_text;
     targetPage = goosebump.options[0].target_page;
     options = goosebump.options;
-    return (
-      <main className="main">
-        <div className="main-text"> {goosebump.pageText}</div> 
-        <div className="options2">
-          {options.map((item) => (
-            <Options key={item.id} {...item} />
-          ))}
-        </div>
-      </main>
-    );
+    if (id % 136 === 0) {
+      return (
+        <main className="main">
+          <div className="main-text">THE END</div> 
+          <div className="options2">
+            {/* {paths.map((item) => (
+              <Path key={item.id} {...paths} />
+            ))} */}
+          </div>
+        </main>
+      );
+    } else {
+      return (
+        <main className="main">
+          <div className="main-text"> {goosebump.pageText}</div> 
+          <div className="options2">
+            {options.map((item) => (
+              <Options key={item.id} {...item} />
+            ))}
+          </div>
+        </main>
+      );
+    }
+
   }
 
 }
