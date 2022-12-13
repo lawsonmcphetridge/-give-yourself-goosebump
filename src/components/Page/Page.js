@@ -3,11 +3,13 @@ import { useGoosebump } from '../../hooks/useGoosebump';
 import './Book.css';
 import { useParams } from 'react-router-dom';
 import Options from '../Options/Options';
+import Overview from '../Options/Options';
 
 
 export default function Page() {
   const { id } = useParams();
   const { goosebump, setGoosebump } = useGoosebump(id);
+  let overview;
   let optionsText;
   let options;
   let targetPage;
@@ -18,12 +20,25 @@ export default function Page() {
     if (id % 136 === 0) {
       return (
         <main className="main">
-          <div className="main-text">THE END</div> 
+          <div className="main-text">
+            <div>
+            THE END
+            </div>
+            <div>
+            ADVENTURE OVERVIEW
+            </div>
+            {/* <div className="overview">
+              {overview.map((item) => (
+                <Overview key={item.id} {...item} />
+              ))}
+            </div> */}
+          </div> 
           <div className="options2">
-            {/* {paths.map((item) => (
-              <Path key={item.id} {...paths} />
-            ))} */}
+            {options.map((item) => (
+              <Options key={item.id} {...item} />
+            ))}
           </div>
+          <div><a href={`http://localhost:3000/home`}>Go to bookcase</a></div>
         </main>
       );
     } else {
