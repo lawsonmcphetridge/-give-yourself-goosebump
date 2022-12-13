@@ -1,5 +1,5 @@
 import './App.css';
-import Book from './components/Book/Book';
+import Page from './components/Page/Page';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -10,9 +10,7 @@ function App() {
     <div className="App">
       <div className="app">
         <Switch>
-          <Route path="/books" component={Book} />
-    
-        
+          <Route path="/pages/:id" component={Page} />
         </Switch>
       </div>
     </div>

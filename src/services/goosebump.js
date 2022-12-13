@@ -1,7 +1,7 @@
 const BASE_URL = 'http://localhost:7890';
 
-export async function getGoosebump() {
-  const resp = await fetch(`${BASE_URL}/api/v1/pages/1`, {
+export async function getGoosebump(id) {
+  const resp = await fetch(`${BASE_URL}/api/v1/pages/${id}`, {
     method: 'GET',
     headers: {
       Accept: 'application/json',
