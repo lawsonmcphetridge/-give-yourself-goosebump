@@ -3,7 +3,6 @@ import { useGoosebump } from '../../hooks/useGoosebump';
 import './Book.css';
 import { useParams } from 'react-router-dom';
 import Options from '../Options/Options';
-import Overview from '../Options/Options';
 
 export default function Page() {
   const { id } = useParams();
