@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:7890';
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export async function getGoosebump(id) {
   const resp = await fetch(`${BASE_URL}/api/v1/pages/${id}`, {
