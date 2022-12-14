@@ -21,14 +21,6 @@ export default function Page() {
             <div>
             THE END
             </div>
-            <div>
-            ADVENTURE OVERVIEW
-            </div>
-            {/* <div className="overview">
-              {overview.map((item) => (
-                <Overview key={item.id} {...item} />
-              ))}
-            </div> */}
           </div> 
           <div className="options2">
             {options.map((item) => (
