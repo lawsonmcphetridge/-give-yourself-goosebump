@@ -7,7 +7,6 @@ import Options from '../Options/Options';
 export default function Page() {
   const { id } = useParams();
   const { goosebump } = useGoosebump(id);
-  console.log('32323232', goosebump);
   let optionsText;
   let options;
   let targetPage;
