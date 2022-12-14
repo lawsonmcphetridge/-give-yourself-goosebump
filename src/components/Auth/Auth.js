@@ -18,11 +18,10 @@ export default function Auth() {
       const userResp = signIn(email, password);
       setUser(userResp);
     }
-    console.log(email);
   };
 
   if (user) {
-    return <Redirect to="/todos" />;
+    return <Redirect to="/pages/1" />;
   }
 
   return (
@@ -50,3 +49,5 @@ export default function Auth() {
     </main>
   );
 }
+
+
