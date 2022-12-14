@@ -18,7 +18,6 @@ export default function Auth() {
       const userResp = signIn(email, password);
       setUser(userResp);
     }
-    console.log(email);
   };
 
   if (user) {
