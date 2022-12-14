@@ -15,7 +15,7 @@ export default function Auth() {
       const userResp = await signUpUser(email, password);
       setUser(userResp);
     } else {
-      const userResp = signIn(email, password);
+      const userResp = await signIn(email, password);
       setUser(userResp);
     }
   };

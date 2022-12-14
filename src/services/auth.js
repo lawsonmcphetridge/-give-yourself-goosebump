@@ -16,6 +16,7 @@ export async function getUser() {
 }
 
 export async function signUpUser(email, password) {
+
   const resp = await fetch(`${BASE_URL}/api/v1/users`, {
     method: 'POST',
     headers: {
@@ -28,7 +29,7 @@ export async function signUpUser(email, password) {
   const data = await resp.json();
   if (resp.ok) {
     await signIn(email, password);
-    location.replace('/');
+    location.replace('/home');
   } else {
     // eslint-disable-next-line no-console
     console.error(data.message);
@@ -47,7 +48,7 @@ export async function signIn(email, password) {
   });
   const data = await resp.json();
   if (resp.ok) {
-    location.replace('/');
+    location.replace('/home');
   } else {
     // eslint-disable-next-line no-console
     console.error(data.message);
