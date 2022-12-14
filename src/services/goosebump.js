@@ -10,7 +10,6 @@ export async function getGoosebump(id) {
     },
     credentials: 'include',
   });
-  console.log(resp);
   if (resp.ok) {
     const answers = await resp.json();
     return answers;
