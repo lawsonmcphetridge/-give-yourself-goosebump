@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useGoosebump } from '../../hooks/useGoosebump';
 import './Book.css';
 import { useParams } from 'react-router-dom';
 import Options from '../Options/Options';
 import Overview from '../Options/Options';
 
-
 export default function Page() {
   const { id } = useParams();
-  const { goosebump, setGoosebump } = useGoosebump(id);
-  let overview;
+  const { goosebump } = useGoosebump(id);
   let optionsText;
   let options;
   let targetPage;
@@ -53,7 +51,5 @@ export default function Page() {
         </main>
       );
     }
-
   }
-
 }

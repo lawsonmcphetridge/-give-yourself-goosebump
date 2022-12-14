@@ -21,7 +21,7 @@ export default function Auth() {
   };
 
   if (user) {
-    return <Redirect to="/todos" />;
+    return <Redirect to="/pages/1" />;
   }
 
   return (
@@ -49,3 +49,5 @@ export default function Auth() {
     </main>
   );
 }
+
+
