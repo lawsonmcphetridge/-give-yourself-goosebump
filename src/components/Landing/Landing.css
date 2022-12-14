@@ -1,0 +1,29 @@
+.landing-main {
+    background-image: url(/public//harry-potter.jpg);
+     display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+background-size: 100%;
+}
+
+
+.book-one{
+height: 50vh;
+width: 30vh;
+border: 2px solid black;
+margin: 30px;
+background-image: url(/public/book-one.jpg);
+box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.75);
+background-position: center;
+} 
+
+.book-two{
+height: 50vh;
+width: 30vh;
+border: 2px solid black;
+margin: 30px;
+background-image: url(/public/book-two.jpg);
+box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.75);
+background-position: center;
+}

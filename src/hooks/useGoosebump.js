@@ -6,7 +6,6 @@ export function useGoosebump(id) {
 
   useEffect(() => {
     const fetchGoosebump = async () => {
-      console.log('id', id);
       const data = await getGoosebump(id);
       setGoosebump(data);
     };
