@@ -21,7 +21,7 @@ export default function Auth() {
   };
 
   if (user) {
-    return <Redirect to="/pages/1" />;
+    return <Redirect to="/home" />;
   }
 
   return (
