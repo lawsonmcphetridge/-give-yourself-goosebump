@@ -7,6 +7,7 @@ import Options from '../Options/Options';
 export default function Page() {
   const { id } = useParams();
   const { goosebump } = useGoosebump(id);
+  console.log(goosebump);
   let optionsText;
   let options;
   let targetPage;
@@ -33,7 +34,9 @@ export default function Page() {
     } else {
       return (
         <main className="main">
-          <div className="main-text"> {goosebump.pageText}</div> 
+          <div className="main-text">
+            <pre>{goosebump.pageText}</pre> 
+          </div> 
           <div className="options2">
             {options.map((item) => (
               <Options key={item.id} {...item} />
