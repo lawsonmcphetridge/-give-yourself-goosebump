@@ -23,9 +23,6 @@ font-size: 8rem;
 .margin {
     margin: 5vh;
 }
-.options{
-    
-}
 
 .main-text {
     display: flex;
@@ -37,6 +34,12 @@ font-size: 8rem;
     font-size: 1vw;
     font-family: 'Special Elite', cursive;
     animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+.page-number {
+    display: flex;
+    font-size: 4vw;
+    align-items: right;
 }
 
 

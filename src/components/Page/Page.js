@@ -11,6 +11,7 @@ export default function Page() {
   if (goosebump.id && id && goosebump.id !== id) {
     return <Redirect to={`/pages/${goosebump.id}`} />;
   }
+  let pageNumber;
   let optionsText;
   let options;
   let targetPage;
@@ -18,6 +19,7 @@ export default function Page() {
     optionsText = goosebump.options[0].option_text;
     targetPage = goosebump.options[0].target_page;
     options = goosebump.options;
+    pageNumber = id % 136;
     if (id % 136 === 0) {
       return (
         <main className="main">
@@ -40,6 +42,9 @@ export default function Page() {
       return (
         <main className="main-page">
           <div className="page-container">
+            <div className="page-number">
+              {pageNumber}
+            </div>
             <div className="main-text slide-left">
               <pre> {goosebump.pageText}</pre>
             </div>
@@ -50,6 +55,9 @@ export default function Page() {
                 ))}
               </div>
             </div>
+          </div>
+          <div className="home-link">
+            <a href={`http://localhost:3000/home`}>Go to home</a>
           </div>
         </main>
       );
