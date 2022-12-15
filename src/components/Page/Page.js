@@ -1,12 +1,16 @@
 import React from 'react';
 import { useGoosebump } from '../../hooks/useGoosebump';
 import './Book.css';
-import { useParams } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom';
 import Options from '../Options/Options';
+import { postGoosebump } from '../../services/goosebump';
 
 export default function Page() {
   const { id } = useParams();
   const { goosebump } = useGoosebump(id);
+  if (goosebump.id && id && goosebump.id !== id) {
+    return <Redirect to={`/pages/${goosebump.id}`} />;
+  }
   let optionsText;
   let options;
   let targetPage;
@@ -27,7 +31,9 @@ export default function Page() {
               <Options key={item.id} {...item} />
             ))}
           </div>
-          <div><a href={`http://localhost:3000/home`}>Go to bookcase</a></div>
+          <div>
+            <a href={`http://localhost:3000/home`}>Go to bookcase</a>
+          </div>
         </main>
       );
     } else {
