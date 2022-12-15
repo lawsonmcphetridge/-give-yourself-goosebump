@@ -9,14 +9,12 @@ export default function Page() {
   const { id } = useParams();
   const { goosebump } = useGoosebump(id);
   if (goosebump.id && id && goosebump.id !== id) {
-    console.log('helllllooo');
     return <Redirect to={`/pages/${goosebump.id}`} />;
   }
   let optionsText;
   let options;
   let targetPage;
   if (goosebump.options) {
-    console.log('goosebump.options', goosebump.options);
     optionsText = goosebump.options[0].option_text;
     targetPage = goosebump.options[0].target_page;
     options = goosebump.options;

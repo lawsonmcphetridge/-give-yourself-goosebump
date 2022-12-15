@@ -7,7 +7,6 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 const THIS_URL = process.env.REACT_APP_THIS_URL;
 
 export default function Options({ sourceId, target_page, option_text }) {
-  console.log('target page ', target_page);
   const history = useHistory();
   const postRequest = async () => {
     await fetch(`${BASE_URL}/api/v1/pages/${target_page}`, {
