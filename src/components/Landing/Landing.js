@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
-import Header from '../Header/Header';
 import './Landing.css';
 import goose from './goose-text.png';
 import { signOut } from '../../services/auth';

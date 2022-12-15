@@ -14,7 +14,6 @@ export async function getGoosebump(id) {
     });
     if (resp.ok) {
       const answers = await resp.json();
-      console.log(answers);
       return answers;
     }
   }
