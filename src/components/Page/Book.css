@@ -23,7 +23,9 @@
 .margin {
   margin: 5vh;
 }
-.options {
+
+body {
+  background-color: black;
 }
 
 .book-title {

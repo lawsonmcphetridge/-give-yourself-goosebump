@@ -1,13 +1,13 @@
 .landing-main {
   display: grid;
   grid-template-rows: 2fr 10fr;
-  background-image: url(./spooky-fog.jpg);
+  background-image: url(./cartoon-forest.jpg);
   background-position: center;
   background-size: cover;
-
+  background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 .landing-goose {
@@ -16,6 +16,7 @@
 
 .books {
   display: flex;
+  width: 70vh;
 }
 
 .book-one {

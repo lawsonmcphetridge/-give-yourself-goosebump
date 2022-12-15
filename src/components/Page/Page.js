@@ -8,10 +8,11 @@ import { postGoosebump } from '../../services/goosebump';
 export default function Page() {
   const { id } = useParams();
   const { goosebump } = useGoosebump(id);
+  console.log('params', id);
   if (goosebump.id && id && goosebump.id !== id) {
     return <Redirect to={`/pages/${goosebump.id}`} />;
   }
-  console.log(goosebump);
+
   let optionsText;
   let options;
   let targetPage;
@@ -40,8 +41,9 @@ export default function Page() {
         <main className="main-page">
           <div className="page-container">
             <div className="main-text slide-left">
-              {goosebump.book_id === 1 ? (
-                <h2 className="book-title">Escape From The Carnival Of Horros</h2>
+              {console.log('bookid', goosebump.bookId)}
+              {goosebump.bookId === '1' ? (
+                <h2 className="book-title">Escape From The Carnival Of Horrors</h2>
               ) : (
                 <h2 className="book-title">Beware Of The Purple Peanut Butter</h2>
               )}

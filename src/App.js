@@ -5,16 +5,14 @@ import Auth from './components/Auth/Auth';
 import Landing from './components/Landing/Landing';
 
 function App() {
-
-
-  
   return (
     <div className="App">
       <div className="app">
         <Switch>
           <Route path="/pages/:id" component={Page} />
           <Route path="/auth/:type" component={Auth} />
-          <Landing path="/home" component={Landing} />
+          <Route path="/home" component={Landing} />
+          <Redirect from="*" to="/home" />
         </Switch>
       </div>
     </div>
