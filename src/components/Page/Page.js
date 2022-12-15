@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useGoosebump } from '../../hooks/useGoosebump';
 import './Book.css';
 import { Redirect, useParams } from 'react-router-dom';
 import Options from '../Options/Options';
 import { postGoosebump } from '../../services/goosebump';
+import { signOut } from '../../services/auth';
+import { UserContext } from '../context/UserContext';
 
 export default function Page() {
   const { id } = useParams();
   const { goosebump } = useGoosebump(id);
-  console.log('params', id);
+  const { user } = useContext(UserContext);
   if (goosebump.id && id && goosebump.id !== id) {
     return <Redirect to={`/pages/${goosebump.id}`} />;
   }
 
+  const handleSignOut = async () => {
+    await signOut();
+  };
 
+  if (!user) {
+    return <Redirect to="/auth/sign-in" />;
+  }
 
   let pageNumber;
   let optionsText;
@@ -36,7 +44,9 @@ export default function Page() {
             ))}
           </div>
           <div>
-            <a href={`http://localhost:3000/home`}>Go to bookcase</a>
+            <a className="go-bookcase" href={`http://localhost:3000/home`}>
+              Go to bookcase
+            </a>
           </div>
         </main>
       );
@@ -44,9 +54,7 @@ export default function Page() {
       return (
         <main className="main-page">
           <div className="page-container">
-            <div className="page-number">
-              {pageNumber}
-            </div>
+            <div className="page-number">{pageNumber}</div>
             <div className="main-text slide-left">
               {console.log('bookid', goosebump.bookId)}
               {goosebump.bookId === '1' ? (
@@ -66,7 +74,12 @@ export default function Page() {
             </div>
           </div>
           <div className="home-link">
-            <a href={`http://localhost:3000/home`}>Go to home</a>
+            <a className="go-home" href={`http://localhost:3000/home`}>
+              Home
+            </a>
+            <button className="sign-out" onClick={handleSignOut}>
+              TOO SCARED ! ?
+            </button>
           </div>
         </main>
       );
