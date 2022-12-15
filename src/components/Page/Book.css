@@ -39,6 +39,12 @@ font-size: 8rem;
     animation: myAnim 1s ease 0s 1 normal forwards;
 }
 
+.page-number {
+    display: flex;
+    font-size: 4vw;
+    align-items: right;
+}
+
 
 @keyframes myAnim {
 	0% {
