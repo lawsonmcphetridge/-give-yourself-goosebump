@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useGoosebump } from '../../hooks/useGoosebump';
 import './Book.css';
-import { Redirect, useParams } from 'react-router-dom';
+import { Link, Redirect, useParams } from 'react-router-dom';
 import Options from '../Options/Options';
 import { postGoosebump } from '../../services/goosebump';
 import { signOut } from '../../services/auth';
@@ -44,9 +44,9 @@ export default function Page() {
             ))}
           </div>
           <div>
-            <a className="go-bookcase" href={`http://localhost:3000/home`}>
-              Go to bookcase
-            </a>
+            <Link className="go-bookcase" to={`/home`}>
+              Home
+            </Link>
           </div>
         </main>
       );
@@ -74,9 +74,9 @@ export default function Page() {
             </div>
           </div>
           <div className="home-link">
-            <a className="go-home" href={`http://localhost:3000/home`}>
+            <Link className="go-home" to={`/home`}>
               Home
-            </a>
+            </Link>
             <button className="sign-out" onClick={handleSignOut}>
               TOO SCARED ! ?
             </button>
