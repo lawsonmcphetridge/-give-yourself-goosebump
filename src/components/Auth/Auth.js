@@ -3,6 +3,7 @@ import { signIn, signUpUser } from '../../services/auth';
 import { UserContext } from '../context/UserContext';
 import './Auth.css';
 import { NavLink, Redirect, useParams } from 'react-router-dom';
+import Header from '../Header/Header';
 
 export default function Auth() {
   const [email, setEmail] = useState();
@@ -25,29 +26,34 @@ export default function Auth() {
   }
 
   return (
-    <main>
-      <div className="switch">
-        <NavLink style={{ textDecoration: 'none' }} className="sign-in-toggle" to="/auth/sign-in">
-          Sign in
-        </NavLink>
-        <NavLink style={{ textDecoration: 'none' }} className="sign-in-toggle" to="/auth/sign-up">
-          Sign up
-        </NavLink>
+    <main className="auth-body">
+      <div className="header-container">
+        <Header />
       </div>
-      <div className="form">
-        <label>Email</label>
-        <input type="email" onChange={(e) => setEmail(e.target.value)}></input>
-        <label>Password</label>
-        <input type="password" onChange={(e) => setPassword(e.target.value)}></input>
-        {type === 'sign-up' && (
-          <button onClick={() => submitAuth(email, password, type)}>Sign up</button>
-        )}
-        {type === 'sign-in' && (
-          <button onClick={() => submitAuth(email, password, type)}>Sign in</button>
-        )}
+      <div className="auth-container">
+        <div className="switch">
+          <NavLink style={{ textDecoration: 'none' }} className="sign-in-toggle" to="/auth/sign-in">
+            Sign in
+          </NavLink>
+          <NavLink style={{ textDecoration: 'none' }} className="sign-in-toggle" to="/auth/sign-up">
+            Sign up
+          </NavLink>
+        </div>
+        <div className="form">
+          <label>Email</label>
+          <input type="email" onChange={(e) => setEmail(e.target.value)}></input>
+          <label>Password</label>
+          <input type="password" onChange={(e) => setPassword(e.target.value)}></input>
+          {type === 'sign-up' && (
+            <button onClick={() => submitAuth(email, password, type)}>Sign up</button>
+          )}
+          {type === 'sign-in' && (
+            <button className="submit-btn" onClick={() => submitAuth(email, password, type)}>
+              Sign in
+            </button>
+          )}
+        </div>
       </div>
     </main>
   );
 }
-
-
