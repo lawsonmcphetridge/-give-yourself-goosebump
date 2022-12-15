@@ -1,57 +1,64 @@
-
 .end {
-font-family: 'Creepster', cursive;
-font-size: 8rem;
+  font-family: 'Creepster', cursive;
+  font-size: 8rem;
 }
 .main-page {
-    height: 100vh;
+  height: 100vh;
   background-image: url(/public/wg_rustic_metal_screen_textures_8.jpg);
 }
 .page-container {
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    background-image: url(/public/grunge-old-vintage-retro-paper-texture-background_47840-948.jpg);
-    padding: 5vh;
-    height: 80vh;
-    width: 70vw;
-    border-radius: 5px;
-    box-shadow: 0px 0px 29px 17px rgba(0,0,0,0.75);
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-width: 800px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/public/grunge-old-vintage-retro-paper-texture-background_47840-948.jpg);
+  padding: 3vh;
+  height: 80vh;
+  width: 70vw;
+  border-radius: 5px;
+  box-shadow: 0px 0px 29px 17px rgba(0, 0, 0, 0.75);
 }
 .margin {
-    margin: 5vh;
+  margin: 5vh;
 }
-.options{
-    
+.options {
+}
+
+.book-title {
+  font-family: 'Creepster', cursive;
+  font-size: 3vh;
+  color: purple;
 }
 
 .main-text {
-    display: flex;
-    height: 600px;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    color: black;
-    font-size: 1vw;
-    font-family: 'Special Elite', cursive;
-    animation: myAnim 1s ease 0s 1 normal forwards;
+  display: flex;
+  height: 600px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  color: black;
+  font-size: 1.2em;
+
+  resize: both;
+  font-family: 'Special Elite', cursive;
+  animation: slide 1s ease 0s 1 normal forwards;
 }
 
-
-@keyframes myAnim {
-	0% {
-		opacity: 0;
-		transform: translateX(250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+.main-text pre {
+  font-family: 'Special Elite', cursive;
 }
 
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
 
-
-
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
