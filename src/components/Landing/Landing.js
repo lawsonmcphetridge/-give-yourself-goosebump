@@ -17,12 +17,8 @@ export default function Landing() {
         <p className="risk">READ AT YOUR OWN RISK</p>
       </div>
       <div className="books">
-        <div className="book-one">
-          <Link to="/pages/1" />
-        </div>
-        <div className="book-two">
-          <Link to="/pages/137" />
-        </div>
+        <Link className="book-one" to="/pages/1" />
+        <Link className="book-two" to="/pages/137" />
       </div>
     </main>
   );
