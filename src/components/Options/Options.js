@@ -1,10 +1,6 @@
-import { useCallback } from 'react';
-import { Link, Redirect, useHistory } from 'react-router-dom';
-import { useGoosebumpPost } from '../../hooks/useGoosebump';
-import { postGoosebump } from '../../services/goosebump';
+import { Link, useHistory } from 'react-router-dom';
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
-const THIS_URL = process.env.REACT_APP_THIS_URL;
 
 export default function Options({ sourceId, target_page, option_text }) {
   const history = useHistory();

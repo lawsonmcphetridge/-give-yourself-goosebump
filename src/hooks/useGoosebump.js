@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { getGoosebump, postGoosebump } from '../services/goosebump';
 
 export function useGoosebump(id) {

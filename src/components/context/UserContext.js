@@ -16,8 +16,6 @@ const UserProvider = ({ children }) => {
     getCurrentUser();
   }, []);
 
-  // const fetchedUser = getCurrentUser();
-
   return <UserContext.Provider value={{ user, setUser }}>{children}</UserContext.Provider>;
 };
 

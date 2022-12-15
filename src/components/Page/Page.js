@@ -3,7 +3,7 @@ import { useGoosebump } from '../../hooks/useGoosebump';
 import './Book.css';
 import { Link, Redirect, useParams } from 'react-router-dom';
 import Options from '../Options/Options';
-import { postGoosebump } from '../../services/goosebump';
+
 import { signOut } from '../../services/auth';
 import { UserContext } from '../context/UserContext';
 
@@ -56,7 +56,6 @@ export default function Page() {
           <div className="page-container">
             <div className="page-number">{pageNumber}</div>
             <div className="main-text slide-left">
-              {console.log('bookid', goosebump.bookId)}
               {goosebump.bookId === '1' ? (
                 <h2 className="book-title">Escape From The Carnival Of Horrors</h2>
               ) : (
