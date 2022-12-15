@@ -22,8 +22,10 @@ export default function Page() {
       return (
         <main className="main">
           <div className="main-text">
-            <div>THE END</div>
-          </div>
+            <div className='end'>
+            THE END
+            </div>
+          </div> 
           <div className="options2">
             {options.map((item) => (
               <Options key={item.id} {...item} />
@@ -36,12 +38,18 @@ export default function Page() {
       );
     } else {
       return (
-        <main className="main">
-          <div className="main-text"> {goosebump.pageText}</div>
-          <div className="options2">
-            {options.map((item) => (
-              <Options key={item.id} {...item} sourceId={id} />
-            ))}
+        <main className="main-page">
+          <div className="page-container">
+            <div className="main-text slide-left">
+              <pre> {goosebump.pageText}</pre>
+            </div>
+            <div className='margin'>
+              <div className="options">
+                {options.map((item) => (
+                  <Options key={item.id} {...item} />
+                ))}
+              </div>
+            </div>
           </div>
         </main>
       );

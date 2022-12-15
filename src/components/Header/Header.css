@@ -1,0 +1,37 @@
+.goose-text {
+  height: 20vh;
+  position: absolute;
+  top: 7vh;
+  right: 50%;
+  left: 34.5%;
+}
+
+.title {
+  font-family: 'Creepster', cursive;
+  color: rgb(239, 141, 50);
+  margin: 0;
+}
+
+.auth-body {
+  display: grid;
+  grid-template-rows: 2fr 10fr;
+  width: 100vw;
+  background-image: url(./spooky-stock-market.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-btn {
+  cursor: pointer;
+}
+
+.form {
+  margin-bottom: 12vh;
+}

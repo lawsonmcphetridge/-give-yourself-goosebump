@@ -12,35 +12,47 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Signika Negative', sans-serif;
+
   width: 20vh;
   font-size: 2vh;
-  border: 4px solid rgb(56, 41, 51);
-  color: rgb(255, 255, 255);
-  padding: 5vh; 
+  border: 4px solid rgb(117, 202, 120);
+  color: rgb(108, 215, 112);
+  padding: 5vh;
   height: 15vh;
   gap: 2vh;
+  font-family: 'Special Elite', cursive;
+  padding: 7vh;
   border-radius: 8px;
-  background-color: rgb(35, 37, 33);
-  box-shadow: 5px 5px 8px -2px rgba(0,0,0,0.75);
--webkit-box-shadow: 5px 5px 8px -2px rgba(0,0,0,0.75);
--moz-box-shadow: 5px 5px 8px -2px rgba(0,0,0,0.75);
-  
+  background-color: black;
+  box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.75);
 }
 
 .form button {
   margin: 1vh;
-  background-color: rgb(56, 41, 51);
-  color:rgb(241, 241, 240);
-  padding-left: 1vh;
-  padding-right: 1vh;
-  padding-top: .5vh;
-  padding-bottom: .5vh;
-  border: 2px solid rgb(59, 82, 73);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: rgb(84, 232, 89);
+  font-family: 'Special Elite', cursive;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 1vh;
+  padding-bottom: 0.5vh;
+  border: 2px solid rgb(204, 86, 30);
   border-radius: 8px;
-  box-shadow: 2px 2px 8px -2px rgb(56, 41, 51);
--webkit-box-shadow: 2px 2px 8px -2px rgb(56, 41, 51);
--moz-box-shadow: 2px 2px 8px -2px rgb(56, 41, 51);
+  box-shadow: 1px 1px 8px -1px rgb(204, 86, 30);
+  -webkit-box-shadow: 1px 1px 6px -1px rgb(204, 86, 30);
+  -moz-box-shadow: 1px 1px 6px -1px rgb(204, 86, 30);
+}
+
+.form button:hover {
+  transform: scale(1.08);
+  transition: all 0.3s ease-in-out;
+  border: 2px solid rgb(84, 232, 89);
+  color: rgb(204, 86, 30);
 }
 
 .switch {
@@ -61,6 +73,13 @@ main {
 .sign-in-toggle:hover {
   transform: scale(1.03);
   color: rgb(160, 83, 196);
-  transition: all .2s ease-in-out;
-  text-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+}
+
+.switch a {
+  font-size: 2vh;
+  font-weight: bold;
+  font-family: 'Special Elite', cursive;
+  color: rgb(204, 86, 30);
 }
