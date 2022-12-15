@@ -8,9 +8,13 @@ import { postGoosebump } from '../../services/goosebump';
 export default function Page() {
   const { id } = useParams();
   const { goosebump } = useGoosebump(id);
+  console.log('params', id);
   if (goosebump.id && id && goosebump.id !== id) {
     return <Redirect to={`/pages/${goosebump.id}`} />;
   }
+
+
+
   let pageNumber;
   let optionsText;
   let options;
@@ -24,10 +28,8 @@ export default function Page() {
       return (
         <main className="main">
           <div className="main-text">
-            <div className='end'>
-            THE END
-            </div>
-          </div> 
+            <div className="end">THE END</div>
+          </div>
           <div className="options2">
             {options.map((item) => (
               <Options key={item.id} {...item} />
@@ -46,9 +48,16 @@ export default function Page() {
               {pageNumber}
             </div>
             <div className="main-text slide-left">
+              {console.log('bookid', goosebump.bookId)}
+              {goosebump.bookId === '1' ? (
+                <h2 className="book-title">Escape From The Carnival Of Horrors</h2>
+              ) : (
+                <h2 className="book-title">Beware Of The Purple Peanut Butter</h2>
+              )}
+
               <pre> {goosebump.pageText}</pre>
             </div>
-            <div className='margin'>
+            <div className="margin">
               <div className="options">
                 {options.map((item) => (
                   <Options key={item.id} {...item} />
