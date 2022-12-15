@@ -22,9 +22,9 @@ export default function Options({ sourceId, target_page, option_text }) {
   };
   return (
     <div className="option">
-      <a href={`${THIS_URL}/pages/${target_page}`} onClick={postRequest}>
+      <Link to={`/pages/${target_page}`} onClick={postRequest}>
         {option_text}
-      </a>
+      </Link>
     </div>
   );
 }

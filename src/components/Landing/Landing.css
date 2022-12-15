@@ -1,6 +1,6 @@
 .landing-main {
   display: grid;
-  grid-template-rows: 2fr 10fr;
+  grid-template-rows: 2fr 10fr 2fr;
   background-image: url(./cartoon-forest.jpg);
   background-position: center;
   background-size: cover;
@@ -8,6 +8,10 @@
   justify-content: center;
   align-items: center;
   background-size: 100% 100%;
+}
+
+.sign-out {
+  cursor: pointer;
 }
 
 .landing-goose {
@@ -19,7 +23,15 @@
   width: 70vh;
 }
 
+.sign-out-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .book-one {
+  justify-self: center;
+  align-self: center;
   height: 50vh;
   width: 30vh;
   border: 2px solid black;

@@ -1,15 +1,19 @@
 .goose-text {
   height: 20vh;
-  position: absolute;
+
   top: 7vh;
   right: 50%;
-  left: 34.5%;
+  left: 38.5%;
 }
 
 .title {
   font-family: 'Creepster', cursive;
   color: rgb(239, 141, 50);
-  margin: 0;
+  margin-top: 7vh;
+}
+
+input {
+  width: 10vw;
 }
 
 .auth-body {
