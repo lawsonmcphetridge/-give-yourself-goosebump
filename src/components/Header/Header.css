@@ -4,6 +4,7 @@
   top: 7vh;
   right: 50%;
   left: 38.5%;
+  animation: wobble 3s ease 0s infinite normal forwards;
 }
 
 .title {
@@ -38,4 +39,30 @@ input {
 
 .form {
   margin-bottom: 12vh;
+}
+
+@keyframes wobble {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
 }
