@@ -11,9 +11,9 @@ export default function Page() {
   const { id } = useParams();
   const { goosebump } = useGoosebump(id);
   const { user } = useContext(UserContext);
-  if (goosebump.id && id && goosebump.id !== id) {
-    return <Redirect to={`/pages/${goosebump.id}`} />;
-  }
+  // if (goosebump.id && id && goosebump.id !== id) {
+  //   return <Redirect to={`/pages/${goosebump.id}`} />;
+  // }
 
   const handleSignOut = async () => {
     await signOut();
